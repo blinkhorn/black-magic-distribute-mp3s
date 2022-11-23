@@ -243,5 +243,7 @@ $RECYCLE.BIN/
 
 # files I don't want visible
 template.yaml
+.aws-sam/*
+samconfig.toml
 
 # End of https://www.gitignore.io/api/osx,linux,python,windows,pycharm,visualstudiocode
