@@ -21,7 +21,7 @@ def lambda_handler(event, context):
     }
     try:
         destination_bucket_directories = [
-            user_id.get('id') for user_id in dynamodb_table.scan()['Items']
+            user.get('id') for user in dynamodb_table.scan()['Items']
         ]
         destination_bucket = s3.Bucket(DESTINATION_BUCKET_NAME)
         for destination_bucket_directory in destination_bucket_directories:
